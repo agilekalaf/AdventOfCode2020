@@ -5,8 +5,23 @@ sum = 0
 a = 0
 
 def add_value(i,a):
-  sum = entries[a] + entries[i]
-  print(sum)
+  if(a < 199):
+    for num in entries:
+      i += 1
+      if(i > 199):
+        print("end of the list")
+        a += 1
+        i = 0
+        add_value(i,a)
+      else:
+        sum = entries[a] + entries[i]
+        if sum == 2020:
+          print(sum)
+          print(entries[i], entries[a])
+          print(entries[i] * entries[a])
+          break
+        else:
+          print(sum,i)
 
 for num in entries:
     i += 1
